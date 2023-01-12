@@ -83,21 +83,15 @@ button{
     color: var(--white); 
     transition: all 1s;  
 }
-button:hover{
-    color: var(--black);
-    background: var(--white);
-}
 button a{
     color: var(--white);
     display: block;
+    text-decoration: none;
     width: 100%;
     font-size: 1.8rem;
     font-weight: 700;
     transition: all 1s; 
 
-}
-button:hover a{
-    color: var(--black);
 }
 a[href='#kontakt']{
     cursor: not-allowed;
@@ -205,16 +199,19 @@ h3{
 footer{
     background: #4E4E4E;
     color: var(--white);
+    padding: 40px 0;
 }
 footer .pos-center{
     flex-direction: column;
     align-content: center;
     justify-content: center;
     row-gap: 15px;
-    padding: 40px 0;
+
 }
 footer p{
     margin: 0;
+    text-align: center;
+    line-height: 140%;
 }
 .fa-brands{
     font-size: 30px;
@@ -261,7 +258,8 @@ footer p{
 @media only screen and (min-width: 992px){
     .pos-center{
         width: 960px;
-        margin: 0 auto;;
+        margin: 0 auto;
+        padding: 0;
     }
     /* *** NAVIGATION *** */
     .nav-desktop{
@@ -273,6 +271,13 @@ footer p{
     }
     p{
         margin: 55px 0 43px 0;
+    }
+    button:hover{
+        color: var(--black);
+        background: var(--white);
+    }
+    button:hover a{
+        color: var(--black);
     }
     /* *** ABOUT US *** */
     .about-us .pos-center{
@@ -296,7 +301,11 @@ footer p{
     }
     article:nth-child(2n+1) .info{
         grid-column: 1/2; 
-        grid-row: 1/2; 
+        grid-row: 1/2;
+        align-items: end;
+    }
+    article:nth-child(2n+1) .info p{
+        text-align: end;
     }
     article:nth-child(2n+1) .photo{
         grid-column: 2/-1; 
